@@ -8,6 +8,11 @@ app.get('/accel', function(req, res){
     res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/accel/control', function(req, res){
+    console.log("GET")
+    res.sendFile(__dirname + '/controller.html');
+});
+
 io.on('connection', function(socket){
     console.log('a user connected');
     socket.on('disconnect', function(){
