@@ -14,6 +14,8 @@
         #messages li:nth-child(odd) { background: #eee; }
         html, body {
             overflow: hidden;
+            height:100%;
+            width:100%;
         }
 
     </style>
@@ -31,6 +33,7 @@
         canvas.height = document.body.clientHeight; //document.height is obsolete
         canvasW = canvas.width;
         canvasH = canvas.height;
+        console.log([canvasW, canvasH])
         ctx=canvas.getContext("2d");
         var px =0.2, py=0.5, pz = 0.8, len=10;
         function drawCanvas(x, y, z){
