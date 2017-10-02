@@ -13,8 +13,8 @@ io.on('connection', function(socket){
         console.log('user disconnected');
     });
     socket.on('accel', function (data) {
-        socket.broadcast.to(data.channelName)
-            .emit("spaceChanges",data);
+        socket.broadcast
+            .emit("accel",data);
     });
 
 });
