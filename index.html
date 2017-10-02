@@ -48,20 +48,20 @@
 // now clear the right-most pixels:
             ctx.clearRect(canvasW-len, 0, len, canvasH);
 
-            context.beginPath();
+            ctx.beginPath();
             ctx.moveTo(canvasW-len, px*canvasH);
             ctx.lineTo(canvasW, (0.2+x)*canvasH);
             px = 0.2+x;
             ctx.stroke();
 
-            context.beginPath();
+            ctx.beginPath();
             ctx.moveTo(canvasW-len, py*canvasH);
             ctx.lineTo(canvasW, (0.5+y)*canvasH);
             py = 0.5+y;
             ctx.stroke();
 
 
-            context.beginPath();
+            ctx.beginPath();
             ctx.moveTo(canvasW-len, pz*canvasH);
             ctx.lineTo(canvasW, (0.8+z)*canvasH);
             pz = 0.8+z;
