@@ -18,6 +18,7 @@
   "homepage": "https://github.com/maxwg/accelerometer-socket-fun#readme",
   "dependencies": {
     "express": "^4.16.1",
+    "ejs": "0.7.x",
     "socket.io": "^2.0.3"
   }
 }
