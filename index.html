@@ -46,16 +46,16 @@
             ctx.clearRect(canvasW-len, 0, len, canvasH);
 
             ctx.moveTo(canvasW-len, px*canvasH);
-            ctx.lineTo(canvasW, 0.2+x);
+            ctx.lineTo(canvasW, (0.2+x)*canvasH);
             px = 0.2+x;
             ctx.stroke();
             ctx.moveTo(canvasW-len, py*canvasH);
-            ctx.lineTo(canvasW, 0.5+y);
-            py = 0.2+x;
+            ctx.lineTo(canvasW, (0.5+y)*canvasH);
+            py = 0.5+x;
             ctx.stroke();
             ctx.moveTo(canvasW-len, pz*canvasH);
-            ctx.lineTo(canvasW, 0.8+z);
-            pz = 0.2+x;
+            ctx.lineTo(canvasW, (0.8+z)*canvasH);
+            pz = 0.8+x;
             ctx.stroke();
 
         }
