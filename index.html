@@ -20,12 +20,11 @@
 </head>
 <body>
 <canvas id="mainCanvas">
-
 </canvas>
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 <script>
-    $(function () {
+    $(document).ready(function () {
 
         canvas = document.getElementById("mainCanvas");
         canvas.width = document.body.clientWidth; //document.width is obsolete
