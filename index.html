@@ -33,13 +33,12 @@
         canvas.height = document.body.clientHeight; //document.height is obsolete
         canvasW = canvas.width;
         canvasH = canvas.height;
-        console.log([canvasW, canvasH])
         ctx=canvas.getContext("2d");
-        var px =0.2, py=0.5, pz = 0.8, len=10;
+        var px =0.2, py=0.5, pz = 0.8, len=3;
         function drawCanvas(x, y, z){
-            x/=3;
-            y/=3;
-            z/=3;
+            x/=30;
+            y/=30;
+            z/=30;
 
             var imageData = ctx.getImageData(len, 0, canvasW-len, canvasH);
             ctx.putImageData(imageData, 0, 0);

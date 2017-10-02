@@ -25,21 +25,22 @@
 <script>
     $(function () {
         var socket = io();
-        //Detect if the browser supports DeviceMotionEvent
+        i = 0;
         if (window.DeviceMotionEvent != undefined) {
-//ondevicemotion is fired when iOS device detects motion
             window.ondevicemotion = function (e) {
-//ax is the movement on the x axis.
-//This motion is used to move the ship in the game
-                ax = event.acceleration.x;
-                ay = event.acceleration.y;
-                az = event.acceleration.z;
-                socket.emit('accel', {'ax': ax,
-                                      'ay': ay,
-                                      'az': az});
-                $("#x").html(ax);
-                $("#y").html(ay);
-                $("#z").html(az);
+                if (i++ % 4 == 0) {
+                    ax = event.acceleration.x;
+                    ay = event.acceleration.y;
+                    az = event.acceleration.z;
+                    socket.emit('accel', {
+                        'ax': ax,
+                        'ay': ay,
+                        'az': az
+                    });
+                    $("#x").html(ax);
+                    $("#y").html(ay);
+                    $("#z").html(az);
+                }
             }
         }
     });
