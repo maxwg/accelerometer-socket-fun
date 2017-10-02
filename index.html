@@ -31,8 +31,7 @@
         canvas.height = document.body.clientHeight; //document.height is obsolete
         canvasW = canvas.width;
         canvasH = canvas.height;
-        var c=document.getElementById("myCanvas");
-        var ctx=c.getContext("2d");
+        ctx=canvas.getContext("2d");
         var px =0.2, py=0.5, pz = 0.8, len=10;
         function drawCanvas(x, y, z){
             x/=3;
