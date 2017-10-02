@@ -22,6 +22,7 @@
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 <script>
     $(function () {
+        var socket = io();
         //Detect if the browser supports DeviceMotionEvent
         if (window.DeviceMotionEvent != undefined) {
 //ondevicemotion is fired when iOS device detects motion
