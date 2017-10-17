@@ -3,8 +3,10 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
+
 app.get('/accel', function(req, res){
     console.log("GET")
+    res.header('X-FRAME-OPTIONS', 'ALLOW-FROM *');
     res.sendFile(__dirname + '/index.html');
 });
 
